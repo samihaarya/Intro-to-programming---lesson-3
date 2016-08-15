@@ -1,10 +1,14 @@
 import webbrowser
 
 class Movie():
-    def __init__(self, movie_title, movie_genre, movie_storyline, poster_image,trailer_youtube):
+    """ this class provides a way to store movie related information"""
+
+
+    def __init__(self, movie_title, movie_genre, movie_year, movie_storyline, poster_image,trailer_youtube):
         # self is the obect which is called eg. in this case it points to toy_story..
         self.title = movie_title
         self.genre = movie_genre
+        self.year = movie_year
         self.storyline = movie_storyline
         self.poster_image_url = poster_image
         self.trailer_youtube_url = trailer_youtube

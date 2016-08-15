@@ -132,6 +132,7 @@ movie_tile_content = '''
     <h2>{movie_title}</h2>
     <h4 style= "color: ivory; font-style: italic;">{movie_genre}</h4>
     <p>{movie_storyline}</p>
+    <b>{movie_year}</b>
 </div>
 '''
 
@@ -154,7 +155,8 @@ def create_movie_tiles_content(movies):
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id,
             movie_genre=movie.genre,
-            movie_storyline=movie.storyline
+            movie_storyline=movie.storyline,
+            movie_year=movie.year
         )
     return content
 
