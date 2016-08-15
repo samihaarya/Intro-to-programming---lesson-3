@@ -11,3 +11,4 @@ class Movie():
 #we can replace self with any word for this whole page.
     def show_trailer(self):
         webbrowser.open(self.trailer_youtube_url)
+        #Making some changes here and there!
