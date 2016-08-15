@@ -19,6 +19,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color: tomato;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -38,14 +39,18 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            background-color: darkslategray:
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #edca39;
             cursor: pointer;
         }
         .scale-media {
             padding-bottom: 56.25%;
             position: relative;
+        }
+        .h4{
+            color: white;
         }
         .scale-media iframe {
             border: none;
@@ -125,6 +130,8 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <h4 style= "color: ivory; font-style: italic;">{movie_genre}</h4>
+    <p>{movie_storyline}</p>
 </div>
 '''
 
@@ -145,7 +152,9 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            movie_genre=movie.genre,
+            movie_storyline=movie.storyline
         )
     return content
 
