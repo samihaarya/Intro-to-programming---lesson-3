@@ -128,10 +128,9 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+    <img src="{poster_image_url}" width="200" height="302">
     <h2>{movie_title}</h2>
     <h4 style= "color: ivory; font-style: italic;">{movie_genre}</h4>
-    <p>{movie_storyline}</p>
     <b>{movie_year}</b>
 </div>
 '''
@@ -155,7 +154,6 @@ def create_movie_tiles_content(movies):
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id,
             movie_genre=movie.genre,
-            movie_storyline=movie.storyline,
             movie_year=movie.year
         )
     return content
@@ -164,15 +162,12 @@ def create_movie_tiles_content(movies):
 def open_movies_page(movies):
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
-
     # Replace the movie tiles placeholder generated content
     rendered_content = main_page_content.format(
         movie_tiles=create_movie_tiles_content(movies))
-
     # Output the file
     output_file.write(main_page_head + rendered_content)
     output_file.close()
-
     # open the output file in the browser (in a new tab, if possible)
     url = os.path.abspath(output_file.name)
     webbrowser.open('file://' + url, new=2)
