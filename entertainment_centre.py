@@ -1,5 +1,11 @@
 import fresh_tomatoes
 import media
+""" import function is an inbuilt function which imports code from outside
+this file (that file can be any other python file or web browser or
+information from your computer like date and time etc. ).
+for e.g. in tis file, we are importing our code fom
+fresh_tomatoes.py and media.py.
+"""
 
 Divergent = media.Movie("Divergent",
 "Action, Adventure, Thriller, Science Fiction, Mystery", "2014",
