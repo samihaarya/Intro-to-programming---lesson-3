@@ -4,9 +4,8 @@ A collection of movies with their year of release ,their genres and trailer. App
 Prerequisites:
   Python 2.7
 
-How to Run:
-  *Download/Fork this repo.
-  *Open Movie Website Directory
-  
- In a terminal here in this Directory run the following command.
-    python entertainment_center.py
+## How to Run:
+### Download/Fork this repo.
+### Open Movie Website Directory.
+### In a terminal here in this Directory run the following command: 
+python entertainment_center.py
